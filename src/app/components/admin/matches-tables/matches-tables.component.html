@@ -1,0 +1,26 @@
+<table class="table table-dark table-striped">
+    <thead>
+        <tr>
+            <th scope="col">id</th>
+            <th scope="col">First</th>
+            <th scope="col">Last</th>
+            <th scope="col">Handle</th>
+            <th scope="col">Action</th>
+        </tr>
+    </thead>
+    <tbody>
+        <tr *ngFor='let m of matches'>
+            <th scope="row">{{m.id}}</th>
+            <td>{{m.teamOne}}</td>
+            <td>{{m.teamTwo}}</td>
+            <td>{{m.scoreOne}}</td>
+            <td>{{m.scoreTwo}}</td>
+            <td>
+                <app-btn [obj]='{color: "danger" , name:"Delete"}' (click)='deleteMatch(m._id)'></app-btn>
+                <app-btn [obj]='{color: "success" , name:"Display"}' (click)='getMatchById(m._id)'></app-btn>
+                <app-btn [obj]='{color: "info" , name:"Edit"}' (click)='goToEditMatch(m._id)'></app-btn>
+            </td>
+        </tr>
+
+    </tbody>
+</table>

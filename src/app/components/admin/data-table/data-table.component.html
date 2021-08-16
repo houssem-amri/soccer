@@ -1,0 +1,147 @@
+<table mat-table [dataSource]="dataSource" class="mat-elevation-z8" matSort>
+
+    <!--- Note that these columns can be defined in any order.
+        The actual rendered columns are set as a property on the row definition" -->
+
+    <!-- name Column -->
+    <ng-container matColumnDef="name">
+        <th mat-header-cell *matHeaderCellDef mat-sort-header>first Name </th>
+        <td mat-cell *matCellDef="let element"> {{element.firstName}} </td>
+    </ng-container>
+
+    <!-- email Column -->
+    <ng-container matColumnDef="email">
+        <th mat-header-cell *matHeaderCellDef mat-sort-header> last name </th>
+        <td mat-cell *matCellDef="let element"> {{element.lastName}} </td>
+    </ng-container>
+
+    <!-- phone Column -->
+    <ng-container matColumnDef="phone">
+        <th mat-header-cell *matHeaderCellDef mat-sort-header> email </th>
+        <td mat-cell *matCellDef="let element"> {{element.email}} </td>
+    </ng-container>
+
+    <!-- website Column -->
+    <ng-container matColumnDef="website">
+        <th mat-header-cell *matHeaderCellDef mat-sort-header> role </th>
+        <td mat-cell *matCellDef="let element"> {{element.role }} </td>
+    </ng-container>
+
+    <!-- <ng-container matColumnDef="action">
+        <th mat-header-cell *matHeaderCellDef> Action </th>
+        <td mat-cell *matCellDef="let element">
+            <mat-icon (click)="editUser(element)">edit</mat-icon>
+        </td>
+    </ng-container> -->
+
+    <tr mat-header-row *matHeaderRowDef="displayedColumns"></tr>
+    <tr mat-row *matRowDef="let row; columns: displayedColumns;"></tr>
+</table>
+
+
+
+
+
+
+
+<!-- <div class="row">
+    <div class="col-sm-9">
+        <h3>Basic datatable</h3>
+        <ul>
+
+        </ul>
+        <ngx-datatable tableClass="table table-striped table-bordered table-hover" [tableId]="'basic'" [data]="data"
+            [options]="options" [columns]="columns">
+        </ngx-datatable>
+    </div>
+</div>
+
+<hr /> -->
+
+<!-- <div class="row">
+    <div class="col-sm-12">
+        <h3>Datatable with no data</h3>
+        <ngx-datatable tableClass="table table-striped table-bordered table-hover" [tableId]="'basicNoData'"
+            [data]="dataBasicNoData" [options]="optionsBasicNoData" [columns]="columnsBasicNoData">
+        </ngx-datatable>
+    </div>
+</div>
+
+<hr />
+<div class="row">
+
+    <div class="col-sm-12">
+        <h3>Datatable with caption</h3>
+        <ngx-datatable tableClass="table table-striped table-bordered table-hover" [tableId]="'basic1'"
+            [data]="dataWithCaption" [options]="optionsWithCaption" [columns]="columnsWithCaption">
+            <ngx-caption>
+                <div class="row">
+                    <div class="col-sm-12 col-xs-12 col-12 ">
+                        <b>
+                            <i class="fa fa-table" aria-hidden="true"></i>
+                            Basic Data Table List
+                        </b>
+                    </div>
+                </div>
+            </ngx-caption>
+        </ngx-datatable>
+    </div>
+</div>
+<hr />
+<div class="row">
+    <div class="col-sm-12">
+        <h3>Basic datatable with fixed width, align and text-wrap</h3>
+        <ul>
+            <li>You can modify your table caption. Here, I have added a button</li>
+            <li>You can configure the row click event</li>
+            <li>It can automatically add horizontal scroll</li>
+            <li>width: 50 //it will occupied 50px</li>
+            <li> {{ "align: { head: 'center', body:'left' } //center, left, right" }}</li>
+            <li> {{ "noWrap: { head: true, body: true } // value will be either true or false" }}</li>
+        </ul>
+        <ngx-datatable tableClass="table table-striped table-bordered table-hover" [tableId]="'basic2'"
+            [data]="dataWithFeatures" [options]="optionsWithFeatures" [columns]="columnsWithFeatures"
+            (rowClick)="onRowClick($event)">
+            <ngx-caption>
+                <div class="row">
+                    <div class="col-sm-6 col-xs-6 col-6 ">
+                        <b>
+                            <i class="fa fa-table" aria-hidden="true"></i>
+                            Data Table List
+                        </b>
+                    </div>
+                    <div class="col-sm-6 col-xs-6 col-6  text-right">
+                        <button type="button" class="btn btn-primary" (click)="onClickBtn()">
+                            <i class="fa fa-plus" aria-hidden="true"></i> Add
+                        </button>
+                    </div>
+                </div>
+            </ngx-caption>
+
+        </ngx-datatable>
+    </div>
+
+</div>
+<hr />
+
+<div class="row">
+    <div class="col-sm-12">
+        <h3>Datatable without bootstrap class</h3>
+        <ul>
+            <li>You can modify your tableClass attribute to change the table class.</li>
+        </ul>
+        <ngx-datatable tableClass="" [tableId]="'basic3'" [data]="dataWithoutClass" [options]="optionsWithoutClass"
+            [columns]="columnsWithoutClass">
+            <ngx-caption>
+                <div class="row">
+                    <div class="col-sm-12 col-xs-12 col-12 ">
+                        <b>
+                            <i class="fa fa-table" aria-hidden="true"></i>
+                            Data Table List
+                        </b>
+                    </div>
+                </div>
+            </ngx-caption>
+        </ngx-datatable>
+    </div>
+</div> -->

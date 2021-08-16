@@ -1,0 +1,29 @@
+<table class="table table-dark table-striped">
+    <thead>
+        <tr>
+
+            <th scope="col">First</th>
+            <th scope="col">Last</th>
+            <th scope="col">Email</th>
+            <th scope="col">pwd</th>
+            <th scope="col">Action</th>
+        </tr>
+    </thead>
+    <tbody>
+        <tr *ngFor='let u of users'>
+
+            <td>{{u.firstName}}</td>
+            <td>{{u.lastName}}</td>
+            <td>{{u.email}}</td>
+            <td>{{u.pwd}}</td>
+            <td>
+                <app-btn [obj]='{color: "danger" , name:"Delete"}'></app-btn>
+                <app-btn [obj]='{color: "success" , name:"Display"}'></app-btn>
+                <app-btn [obj]='{color: "info" , name:"Edit"}'></app-btn>
+            </td>
+        </tr>
+
+    </tbody>
+</table>
+<app-data-table></app-data-table>
+<app-data-table-pag></app-data-table-pag>

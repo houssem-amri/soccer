@@ -1,0 +1,54 @@
+.m-t-100 {
+	margin-top: 50px;
+	margin-bottom: 50px;
+}
+.team-vs .btnDisplay {
+	position: absolute;
+	top: 85%;
+	left: 38%;
+	-webkit-transform: translate(-50%, -50%);
+	-ms-transform: translate(-50%, -50%);
+	transform: translate(-50%, -50%);
+	color: #fff;
+	font-size: 16px;
+	font-weight: 700;
+	z-index: 2;
+	letter-spacing: .2em;
+}
+@media (max-width: 991.98px) {
+	.team-vs .btnDisplay {
+		font-size: 16px;
+		left: 25%;
+	}
+}
+.team-vs .btnDisplayEdit {
+	position: absolute;
+	top: 85%;
+	left: 58%;
+	-webkit-transform: translate(-50%, -50%);
+	-ms-transform: translate(-50%, -50%);
+	transform: translate(-50%, -50%);
+	color: #fff;
+	font-size: 16px;
+	font-weight: 700;
+	z-index: 2;
+	letter-spacing: .2em;
+}
+@media (max-width: 991.98px) {
+	.team-vs .btnDisplayEdit {
+		font-size: 16px;
+		left: 75%;
+	}
+}
+.win {
+	color: green;
+	font-size: 50px;
+}
+.loss {
+	color: yellow;
+	font-size: 15px;
+}
+.draw {
+	color: blue;
+	font-size: 30px;
+}

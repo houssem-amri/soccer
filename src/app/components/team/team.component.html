@@ -1,0 +1,26 @@
+<div class="site-section">
+    <div class="widget-next-match">
+        <div class="widget-title">
+            <h3>Team</h3>
+        </div>
+        <div class="widget-body mb-3">
+            <div class="widget-vs">
+                <div class="d-flex align-items-center justify-content-around justify-content-between w-100">
+                    <div>
+                        <img [src]="t.logo" alt="Image">
+                        <h3>{{t.name}} </h3>
+
+                    </div>
+
+                </div>
+            </div>
+        </div>
+
+        <div class="text-center widget-vs-contents mb-4">
+            <h4>{{t.country.name}}</h4>
+            <p class="mb-5">
+                <!-- <strong class="text-primary">{{t.country.continent}}</strong> -->
+            </p>
+        </div>
+    </div>
+</div>
